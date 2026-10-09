@@ -1,7 +1,7 @@
 media:
 
 * name: images
-  label: Product Images
+  label: Images
   input: rrfashionstore/images
   output: /images
 
@@ -20,17 +20,16 @@ content:
     list:
     collapsible:
     collapsed: true
-    summary: "{fields.name}"
+    summary: "{name}"
     fields:
 
     * name: id
-      label: Product ID
+      label: ID
       type: string
 
     * name: name
       label: Product Name
       type: string
-      required: true
 
     * name: price
       label: Price
@@ -51,9 +50,6 @@ content:
     * name: image
       label: Product Image
       type: image
-      options:
-      media: images
-      path: rrfashionstore/images
 
     * name: collections
       label: Collections
