@@ -20,7 +20,7 @@ content:
     list:
     collapsible:
     collapsed: true
-    summary: "{name} (#{index})"
+    summary: "{fields.name} (#{index})"
     fields:
 
     * name: id
