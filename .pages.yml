@@ -9,32 +9,53 @@ content:
   type: file
   path: rrfashionstore/data/products.json
   format: json
-  list: true
   fields:
-  - name: id
-    label: Product ID
-    type: string
-  
-  - name: name
-    label: Product Name
-    type: string
-    required: true
-  
-  - name: price
-    label: Price
-    type: string
-  
-  - name: sizingNote
-    label: Sizing Note
-    type: string
-  
-  - name: material
-    label: Material
-    type: string
-  
-  - name: description
-    label: Description
-    type: text
+  - name: products
+    label: Products
+    type: object
+    list: true
+    fields:
+    - name: id
+      label: Product ID
+      type: string
+    
+    - name: name
+      label: Product Name
+      type: string
+      required: true
+    
+    - name: price
+      label: Price
+      type: string
+    
+    - name: sizingNote
+      label: Sizing Note
+      type: string
+    
+    - name: material
+      label: Material
+      type: string
+    
+    - name: description
+      label: Description
+      type: text
+    
+    - name: image
+      label: Product Image
+      type: image
+    
+    - name: collections
+      label: Collections
+      type: string
+      list: true
+    
+    - name: newIn
+      label: New In
+      type: boolean
+    
+    - name: soldOut
+      label: Sold Out
+      type: boolean    type: text
   
   - name: image
     label: Product Image
