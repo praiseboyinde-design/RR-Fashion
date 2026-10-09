@@ -50,6 +50,8 @@ content:
     * name: image
       label: Product Image
       type: image
+      options:
+      media: images
 
     * name: collections
       label: Collections
