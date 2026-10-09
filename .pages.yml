@@ -1,75 +1,68 @@
 media:
-input: rrfashionstore/images
-output: /images
+
+* name: images
+  label: Product Images
+  input: rrfashionstore/images
+  output: /images
 
 content:
 
-- name: products
+* name: products
   label: Products
   type: file
   path: rrfashionstore/data/products.json
   format: json
   fields:
-  - name: products
+
+  * name: products
     label: Products
     type: object
-    list: true
+    list:
+    collapsible:
+    collapsed: true
+    summary: "{name} (#{index})"
     fields:
-    - name: id
+
+    * name: id
       label: Product ID
       type: string
-    
-    - name: name
+
+    * name: name
       label: Product Name
       type: string
       required: true
-    
-    - name: price
+
+    * name: price
       label: Price
       type: string
-    
-    - name: sizingNote
+
+    * name: sizingNote
       label: Sizing Note
       type: string
-    
-    - name: material
+
+    * name: material
       label: Material
       type: string
-    
-    - name: description
+
+    * name: description
       label: Description
       type: text
-    
-    - name: image
+
+    * name: image
       label: Product Image
       type: image
-    
-    - name: collections
+      options:
+      media: images
+
+    * name: collections
       label: Collections
       type: string
       list: true
-    
-    - name: newIn
+
+    * name: newIn
       label: New In
       type: boolean
-    
-    - name: soldOut
+
+    * name: soldOut
       label: Sold Out
-      type: boolean    type: text
-  
-  - name: image
-    label: Product Image
-    type: string
-  
-  - name: collections
-    label: Collections
-    type: string
-    list: true
-  
-  - name: newIn
-    label: New In
-    type: boolean
-  
-  - name: soldOut
-    label: Sold Out
-    type: boolean
+      type: boolean
