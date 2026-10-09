@@ -20,7 +20,7 @@ content:
     list:
     collapsible:
     collapsed: true
-    summary: "{fields.name}"
+    summary: "{name}"
     fields:
 
     * name: id
@@ -30,7 +30,6 @@ content:
     * name: name
       label: Product Name
       type: string
-      required: true
 
     * name: price
       label: Price
@@ -51,8 +50,6 @@ content:
     * name: image
       label: Product Image
       type: image
-      options:
-      media: images
 
     * name: collections
       label: Collections
